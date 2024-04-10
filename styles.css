@@ -645,7 +645,7 @@ input[type="submit"] {
 nav ul {
     position: absolute;
     top: -50px;
-    left: 550px;
+    right: -10%;
 }
 nav ul li {
     padding-bottom: 40px;
