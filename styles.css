@@ -1,0 +1,499 @@
+/* Kat Weaver */
+
+
+/* RESET*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Molle&family=Montserrat&display=swap');
+
+:root {
+    --yellow: #f6d64a;
+    --teal: #55bcd5;
+    --purple: #9b22b0;
+    --blue: #499bd2;
+    --darkGray: #222222;
+    --lightGrey: #eaeaea;
+    --white: #ffffff;
+    --black: #000000;
+    --select-arrow: var(--select-border);
+
+    font-family: Montserrat, san-serif;
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!ADD FONT FACE/FALLBACK?!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+
+h1 {
+    font-family: Molle, serif;
+    font-size: 3em;
+}
+
+h2 {
+    font-family: Molle, serif;
+    font-size: 2.5em;
+    padding-left: 5%;
+}
+
+h3 {
+    font-family: Molle, serif;
+    font-size: 2em;
+}
+
+h4 {
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+p {
+    font-size: 0.8em;
+    font-weight: 100;
+
+}
+
+q {
+    font-size: 1em;
+    font-style: italic;
+}
+q::before {
+    content: "\201C";
+}
+q::after {
+    content: "\201D";
+}
+
+
+/* HEADER STYLES */
+header {
+    background-image: linear-gradient(var(--teal), white);
+    display: block;
+    text-align: center;
+}
+
+header h2 {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+#skip {
+    position: absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+#skip:focus {
+	position: static;
+	width: auto;
+	height: auto;
+}
+
+/* MENU */
+header label {
+    background-color: var(--yellow);
+    width: 30%;
+    position: absolute;
+    top: 10%;
+    left: 70%;
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+header label:hover {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+nav ul {
+    list-style: none;
+    overflow: hidden;
+    width: 30%;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    position: absolute;
+    top: 17%;
+    left: 70%;
+}
+
+#toggle {
+    display: none;
+}
+
+#toggle:checked~ul {
+    max-height: 400px;
+}
+
+nav li {
+    background-color: var(--teal);
+    border-top: var(--black) solid 1px;
+    padding-top: 20%;
+    padding-bottom: 20%;
+    text-align: center;
+}
+
+nav li:hover {
+    background-color: var(--yellow);
+}
+
+nav li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--black);
+}
+
+/* INTRO */
+#intro h2 {
+    padding-top: 4%;
+}
+
+#intro p {
+    padding: 2% 5%;
+    line-height: 200%;
+}
+
+#intro img,
+#img picture {
+    width: 100%;
+    margin-bottom: 2%;
+}
+
+/* PLAN */
+#plan {
+    background-color: var(--yellow);
+    padding-top: 4%;
+    padding-bottom: 4%;
+    text-align: center;
+}
+
+#plan section {
+    background-color: var(--teal);
+    width: 70%;
+    margin: 2% auto;
+    padding-top: 4%;
+    border: var(--white) solid 3px;
+    border-radius: 15px;
+}
+
+#plan img {
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+/* TESTIMONIALS */
+#testimonials {
+    padding-top: 4%;
+    padding-bottom: 4%;
+    text-align: center;
+}
+
+#testimonials section {
+    margin: 2% auto;
+    padding: 2%;
+}
+
+#testimonials p {
+    font-size: 1em;
+    font-weight: 100;
+    line-height: 200%;
+}
+
+/* ABOUT */
+#about {
+    background-color: var(--blue);
+    padding-top: 4%;
+    padding-bottom: 4%;
+    text-align: center;
+}
+
+#about div {
+    padding-top: 2%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 20px;
+    justify-items: center;
+    align-items: center;
+}
+
+#about img {
+    width: 50%;
+    height: 50%;
+}
+
+#about section {
+    line-height: 200%;
+}
+
+#about section p {
+    font-size: 1em;
+}
+
+/*
+I'm not sure how to get the "size" section paragraph to say "mi sq" instead?
+*/
+
+/* CONTACT */
+.form-required {
+    font-family: Montserrat, sans-serif;
+    font-size: 0.5em;
+    font-style: italic;
+}
+
+form {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#contact h3 {
+    text-align: center;
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+
+input,
+label,
+fieldset,
+select {
+    width: 100%;
+}
+
+input,
+select {
+    padding: 5% 0% 5% 0%;
+    margin-top: 1%;
+    margin-bottom: 3%;
+    border: var(--purple) solid 3px;
+}
+
+input:focus,
+select:focus {
+    border: var(--blue) solid 3px;
+}
+
+label {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.required {
+    color: var(--purple);
+    font-weight: 100;
+    font-size: 1.3em;
+}
+
+input::placeholder {
+    padding-left: 2%;
+    font-size: 1.2em;
+    font-weight: 100;
+}
+
+select:first-child {
+    font-size: 1.2em;
+    font-weight: 100;
+}
+
+fieldset {
+    padding-top: 6%;
+    padding-bottom: 6%;
+    display: flex;
+    flex-direction: column;
+}
+
+fieldset label {
+    font-weight: 100;
+    text-transform: capitalize;
+}
+
+fieldset legend {
+    padding-top: 4%;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+input[type="radio"] {
+    accent-color: var(--purple);
+    width: 60px;
+    height: 60px;
+}
+
+.radioLabel {
+    float: left;
+}
+
+/*
+I'm not sure how to change the color of the radio button when it's not selected?
+Or how to align the label with its button?
+*/
+input[type="submit"] {
+    background-color: var(--purple);
+    color: var(--white);
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--blue);
+    cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--lightGrey);
+    padding-top: 4%;
+    text-align: center;
+}
+
+footer p {
+    padding-bottom: 4%;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--black);
+    display: block;
+    padding-bottom: 4%;
+    font-size: 0.9em;
+}
+
+footer a:hover {
+    color: var(--blue);
+}
